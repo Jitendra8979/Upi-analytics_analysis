@@ -23,14 +23,22 @@ This capstone project provides a comprehensive analysis of UPI transactions to u
 4. **Dashboard Creation:** Built dynamic dashboards in Power BI to monitor KPIs, highlight regional transaction volumes, and flag anomalous activities. 
 
 ## 📊 Key Insights & Findings
-* *(Edit this bullet: Describe a specific trend regarding when or where fraudulent transactions occurred.)*
+
+* **Fraud is device-and-channel concentrated, not random:** Feature Phones show the platform's highest fraud rate (2.15% overall), spiking to **2.3% specifically on the QR Code channel** — the single riskiest device-channel combination on the platform.
+
+* **Fraud arrives in coordinated bursts, not steady growth:** While daily transaction volume grows smoothly over time, fraud alert volume spikes sharply on specific dates rather than scaling proportionally — indicating organized attack windows rather than passive, steady-state fraud.
+
+* **Fraud is amount-agnostic:** Pearson correlation between transaction amount and fraud flag was effectively zero (r = -0.0003, p = 0.9355). A ₹20 transfer is statistically as likely to be flagged as a ₹2,000 transfer, ruling out simple amount-based fraud rules and pointing toward automated, scripted micro-fraud rather than high-value "whaling."
+
+* **Failures are split evenly between user error and infrastructure:** Transaction failures break down almost exactly into quarters — Incorrect PIN (25.7%), Network Error (25.3%), Account Blocked (24.8%), Bank Down (24.2%) — meaning fixing failures requires equal investment in PIN-entry UX and backend banking-gateway reliability.
+
+* **The platform is a high-volume, micro-transaction network:** P2P transfers account for ~70% of all transactions, with a median value of just ~₹33 — spending behavior stays statistically identical across device OS, payment channel, and transaction category (p > 0.05 across all tests).
 * ## 🖼️ Dashboard Preview
-* *(Edit this bullet: Mention the results of a specific statistical test you ran on the transaction data.)*
-* <img width="1227" height="706" alt="Screenshot 2026-09-15 154932" src="https://github.com/user-attachments/assets/b9a312fa-650a-4ccf-af2b-4245744eadde" />
+   <img width="1227" height="706" alt="Screenshot 2026-09-15 154932" src="https://github.com/user-attachments/assets/b9a312fa-650a-4ccf-af2b-4245744eadde" />
 <img width="1230" height="706" alt="Screenshot 2026-09-15 154949" src="https://github.com/user-attachments/assets/a59a74ab-8c17-444d-bbb9-f8a74f7b9172" />
 
 
-* *(Edit this bullet: Highlight a key business recommendation based on your Power BI dashboard visuals.)*
+
 
 ---
 **Author:** Jitendra Kumar  
